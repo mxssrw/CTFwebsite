@@ -12,9 +12,9 @@ const NewsletterSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    
+
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
@@ -46,8 +46,8 @@ const NewsletterSection = () => {
               required
               className="flex-grow"
             />
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               disabled={isSubmitting}
               className="bg-shop-600 hover:bg-shop-700"
             >

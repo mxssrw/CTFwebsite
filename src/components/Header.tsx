@@ -31,7 +31,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <Link to="/" className="text-2xl font-bold text-shop-950">
-            ShopReact
+            CyberPodShop
           </Link>
 
           {/* Mobile Menu Button */}
@@ -44,22 +44,22 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="text-shop-800 hover:text-shop-600 transition-colors">
+            <Link  to="" className="text-shop-800 hover:text-shop-600 transition-colors">
               Home
             </Link>
-            <Link to="/products" className="text-shop-800 hover:text-shop-600 transition-colors">
+            <Link to="" className="text-shop-800 hover:text-shop-600 transition-colors">
               All Products
             </Link>
-            <Link to="/categories" className="text-shop-800 hover:text-shop-600 transition-colors">
+            <Link to="" className="text-shop-800 hover:text-shop-600 transition-colors">
               Categories
             </Link>
-            <Link to="/about" className="text-shop-800 hover:text-shop-600 transition-colors">
+            <Link to="" className="text-shop-800 hover:text-shop-600 transition-colors">
               About
             </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Link to="/cart">
+            <Link to="">
               <Button variant="outline" size="icon" className="relative">
                 <ShoppingCart className="h-5 w-5" />
                 {totalItems > 0 && (

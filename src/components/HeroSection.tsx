@@ -21,10 +21,10 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild className="bg-white text-shop-900 hover:bg-gray-100">
-                <Link to="/products">Shop Now</Link>
+                <Link to="">Shop Now</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white/10">
-                <Link to="/categories">Browse Categories</Link>
+                <Link className="text-xl" to="/transaction">noitcasnarT</Link>
               </Button>
             </div>
           </div>
@@ -34,7 +34,7 @@ const HeroSection = () => {
               <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-shop-400 to-shop-600 opacity-75 blur"></div>
               <div className="relative bg-white p-2 rounded-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80" 
+                  src="https://a1.vaping360.com/Vape_Memes_e0d201bf04.jpg?auto=compress,format&w=auto&h=auto&fit=clamp&sat=0&crop=edges&q=1" 
                   alt="Featured product" 
                   className="rounded w-full max-w-md object-cover"
                 />
