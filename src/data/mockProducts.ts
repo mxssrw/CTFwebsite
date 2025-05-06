@@ -1,0 +1,135 @@
+
+import { Product } from "@/types";
+
+export const mockProducts: Product[] = [
+  {
+    id: 1,
+    name: "Premium Wireless Headphones",
+    price: 149.99,
+    description: "High-quality wireless headphones with noise cancellation and long battery life.",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80",
+    category: "Electronics",
+    stock: 15,
+    featured: true,
+    bestSeller: true,
+    discountPercentage: 10,
+    rating: 4.8
+  },
+  {
+    id: 2,
+    name: "Smart Watch Series 5",
+    price: 299.99,
+    description: "Track your fitness, monitor your health, and stay connected with this smart watch.",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80",
+    category: "Electronics",
+    stock: 8,
+    featured: true,
+    bestSeller: false,
+    discountPercentage: 0,
+    rating: 4.6
+  },
+  {
+    id: 3,
+    name: "Ultra HD 4K TV",
+    price: 799.99,
+    description: "Experience stunning picture quality with this 55-inch Ultra HD 4K TV.",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80",
+    category: "Electronics",
+    stock: 5,
+    featured: true,
+    bestSeller: false,
+    discountPercentage: 15,
+    rating: 4.5
+  },
+  {
+    id: 4,
+    name: "Professional DSLR Camera",
+    price: 1299.99,
+    description: "Capture stunning photos and videos with this professional-grade DSLR camera.",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80",
+    category: "Electronics",
+    stock: 3,
+    featured: false,
+    bestSeller: true,
+    discountPercentage: 5,
+    rating: 4.9
+  },
+  {
+    id: 5,
+    name: "Leather Jacket",
+    price: 199.99,
+    description: "Classic leather jacket with premium quality and timeless design.",
+    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
+    category: "Clothing",
+    stock: 12,
+    featured: true,
+    bestSeller: true,
+    discountPercentage: 0,
+    rating: 4.7
+  },
+  {
+    id: 6,
+    name: "Designer Sunglasses",
+    price: 129.99,
+    description: "Stylish designer sunglasses that provide 100% UV protection.",
+    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
+    category: "Accessories",
+    stock: 20,
+    featured: false,
+    bestSeller: false,
+    discountPercentage: 20,
+    rating: 4.4
+  },
+  {
+    id: 7,
+    name: "Kitchen Blender",
+    price: 89.99,
+    description: "High-powered blender perfect for smoothies, soups, and more.",
+    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=600&q=80",
+    category: "Home & Kitchen",
+    stock: 10,
+    featured: true,
+    bestSeller: false,
+    discountPercentage: 0,
+    rating: 4.3
+  },
+  {
+    id: 8,
+    name: "Athletic Running Shoes",
+    price: 119.99,
+    description: "Comfortable and supportive running shoes for any terrain.",
+    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
+    category: "Footwear",
+    stock: 25,
+    featured: true,
+    bestSeller: true,
+    discountPercentage: 0,
+    rating: 4.7
+  },
+  {
+    id: 9,
+    name: "Pet Carrier",
+    price: 59.99,
+    description: "Safe and comfortable carrier for small pets during travel.",
+    image: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&w=600&q=80",
+    category: "Pets",
+    stock: 15,
+    featured: false,
+    bestSeller: false,
+    discountPercentage: 10,
+    rating: 4.5
+  },
+  {
+    id: 10,
+    name: "Wireless Gaming Mouse",
+    price: 79.99,
+    description: "High-precision wireless gaming mouse with customizable buttons.",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80",
+    category: "Electronics",
+    stock: 18,
+    featured: false,
+    bestSeller: true,
+    discountPercentage: 0,
+    rating: 4.6
+  }
+];
