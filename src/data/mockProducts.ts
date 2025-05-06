@@ -8,12 +8,13 @@ export const mockProducts: Product[] = [
     price: 149.99,
     description: "High-quality wireless headphones with noise cancellation and long battery life.",
     image: "https://a1.vaping360.com/Vape_Memes_e0d201bf04.jpg?auto=compress,format&w=auto&h=auto&fit=clamp&sat=0&crop=edges&q=1",
-    category: "Electronics",
+    category: "Click",
     stock: 15,
     featured: true,
     bestSeller: true,
     discountPercentage: 10,
-    rating: 4.8
+    rating: 4.8,
+    secret: "31",
   },
   {
     id: 2,
@@ -34,12 +35,13 @@ export const mockProducts: Product[] = [
     price: 799.99,
     description: "Experience stunning picture quality with this 55-inch Ultra HD 4K TV.",
     image: "https://a1.vaping360.com/Vape_Memes_e0d201bf04.jpg?auto=compress,format&w=auto&h=auto&fit=clamp&sat=0&crop=edges&q=1",
-    category: "Electronics",
+    category: "Click",
     stock: 5,
     featured: true,
     bestSeller: false,
     discountPercentage: 15,
-    rating: 4.5
+    rating: 4.5,
+    secret: "13",
   },
   {
     id: 4,

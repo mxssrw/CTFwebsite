@@ -13,9 +13,7 @@ const FeaturedProducts = () => {
     // Simulating API fetch with a delay
     const timer = setTimeout(() => {
       // Featured products could be the ones marked as featured or best sellers
-      const featured = mockProducts.filter(
-        (product) => product.featured || product.bestSeller
-      );
+      const featured = mockProducts.sort((a, b) => a.id - b.id)
       setProducts(featured.slice(0, 8)); // Limit to 8 products
       setIsLoading(false);
     }, 500);

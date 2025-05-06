@@ -26,12 +26,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
     });
   };
 
-  const discountedPrice = discountPercentage 
-    ? price - (price * (discountPercentage / 100)) 
+  const discountedPrice = discountPercentage
+    ? price - (price * (discountPercentage / 100))
     : price;
 
   return (
-    <Card 
+    <Card
       className="overflow-hidden transition-all duration-300 hover:shadow-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -52,20 +52,24 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </Badge>
         )}
       </div>
-      
+
       <div className="p-4">
         <div className="mb-2">
-          <Badge variant="outline" className="text-xs text-gray-500 font-normal">
+          <Badge
+            variant="outline"
+            className={`text-xs font-normal ${category === "Click" ? "bg-red-500" : "bg-white-500"
+              }`}
+          >
             {category}
           </Badge>
         </div>
-        
+
         <Link to={`/product/${id}`} className="block mb-2">
           <h3 className="font-medium text-lg line-clamp-2 hover:text-shop-600 transition-colors">
             {name}
           </h3>
         </Link>
-        
+
         <div className="flex items-center justify-between">
           <div>
             {discountPercentage ? (
@@ -77,10 +81,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
               <span className="font-semibold text-shop-900">${price.toFixed(2)}</span>
             )}
           </div>
-          <Button 
+          <Button
             size="sm"
             onClick={handleAddToCart}
-            className="bg-shop-600 hover:bg-shop-700"
+            className={`${category === "Click" ? "bg-red-600 hover:bg-red-700" : "bg-shop-600 hover:bg-shop-700"}`}
           >
             Add to cart
           </Button>

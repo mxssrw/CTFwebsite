@@ -11,4 +11,5 @@ export interface Product {
   bestSeller?: boolean;
   discountPercentage?: number;
   rating?: number;
+  secret?: string;
 }
