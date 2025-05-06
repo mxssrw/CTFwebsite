@@ -75,6 +75,7 @@ const Footer = () => {
             <div className="flex">
               <input
                 type="email"
+                disabled
                 placeholder="Your email"
                 className="bg-shop-900 text-white px-4 py-2 rounded-l outline-none flex-grow"
               />
