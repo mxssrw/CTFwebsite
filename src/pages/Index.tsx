@@ -13,7 +13,6 @@ const Index = () => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-  console.log(sessionStorage)
   return (
     <CartProvider>
       <div className="min-h-screen flex flex-col">
