@@ -28,14 +28,26 @@ const ProductPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6">
+        <div className="mb-6">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-white">
+            {product ? product.name : "Product not found"}
+          </h1>
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            Unique product identifier and details below.
+          </p>
+        </div>
 
-        <h1 className="text-3xl font-bold mb-4">
-          {product ? product.name : "Product not found"}
-        </h1>
-        <h1 className="text-3xl font-bold mb-4 text-green-500">
-          {product ? product.secret : ""}
-        </h1>
+        {product && (
+          <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+            <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+              Secret Code:
+            </h2>
+            <p className="mt-1 text-green-600 font-mono break-all">
+              {product.secret}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

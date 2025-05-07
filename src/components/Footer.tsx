@@ -19,22 +19,22 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Shop</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/products" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   All Products
                 </Link>
               </li>
               <li>
-                <Link to="/new-arrivals" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   New Arrivals
                 </Link>
               </li>
               <li>
-                <Link to="/best-sellers" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   Best Sellers
                 </Link>
               </li>
               <li>
-                <Link to="/discounts" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   Discounts
                 </Link>
               </li>
@@ -45,22 +45,22 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   Terms & Conditions
                 </Link>
               </li>

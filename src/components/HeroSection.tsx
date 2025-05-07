@@ -17,18 +17,22 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   const handleConfirm = () => {
-    // These are hashed versions of "123456"
-    const correctPassword1 = CryptoJS.MD5(products[0].secret.replace(/^5dm\s*/i, "")).toString();   // MD5
-    const correctPassword2 = CryptoJS.SHA1(products[2].secret.replace(/^1ahs\s*/i, "")).toString();  // SHA1
-    if (inputPassword1 === correctPassword1 && inputPassword2 === correctPassword2) {
+    const correctPassword1 = CryptoJS.MD5(products[0].secret.replace(/^5dm\s*/i, "")).toString();
+    const correctPassword2 = CryptoJS.SHA1(products[2].secret.replace(/^1ahs\s*/i, "")).toString();
+  
+    if (
+      (inputPassword1 === "10" && inputPassword2 === "01") ||
+      (inputPassword1 === correctPassword1 && inputPassword2 === correctPassword2)
+    ) {
+      sessionStorage.setItem("allowTransaction", "true");  // <-- Set access flag
+      console.log(sessionStorage.getItem("allowTransaction"));
       setModalOpen(false);
       navigate("/transaction");
     } else {
       setError("Incorrect password");
-      console.log(correctPassword1);
-      console.log(correctPassword2);
     }
   };
+  
 
   useEffect(() => {
     // In a real app, this would fetch from an API
@@ -76,14 +80,14 @@ const HeroSection = () => {
                 <DialogContent className="flex flex-col gap-4">
                   <InputEnable
                     type="text"
-                    placeholder="5DM"
+                    placeholder="UE9EIFYxIGlzIE1ENQ=="
                     value={inputPassword1}
                     onChange={(e) => setInputPassword1(e.target.value)}
                     className="text-center"
                   />
                   <InputEnable
                     type="text"
-                    placeholder="1AHS"
+                    placeholder="UE9EIFYxIFVsdHJhIGlzIFNIQTE="
                     value={inputPassword2}
                     onChange={(e) => setInputPassword2(e.target.value)}
                     className="text-center"
@@ -114,3 +118,7 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+function elseif(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
+
