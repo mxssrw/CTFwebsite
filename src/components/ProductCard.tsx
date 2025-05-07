@@ -84,7 +84,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <Button
             size="sm"
             onClick={handleAddToCart}
-            className={`${category === "Click" ? "bg-red-600 hover:bg-red-700" : "bg-shop-600 hover:bg-shop-700"}`}
+            className="bg-shop-600 hover:bg-shop-700"
           >
             Add to cart
           </Button>

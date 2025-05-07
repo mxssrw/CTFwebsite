@@ -1,8 +1,48 @@
-
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { mockProducts } from "@/data/mockProducts";
+import { InputEnable } from "@/components/ui/input-enable";
+import CryptoJS from "crypto-js";
 
 const HeroSection = () => {
+  // State to manage products and loading state
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [inputPassword1, setInputPassword1] = useState("");
+  const [inputPassword2, setInputPassword2] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleConfirm = () => {
+    // These are hashed versions of "123456"
+    const correctPassword1 = CryptoJS.MD5(products[0].secret.replace(/^5dm\s*/i, "")).toString();   // MD5
+    const correctPassword2 = CryptoJS.SHA1(products[2].secret.replace(/^1ahs\s*/i, "")).toString();  // SHA1
+    if (inputPassword1 === correctPassword1 && inputPassword2 === correctPassword2) {
+      setModalOpen(false);
+      navigate("/transaction");
+    } else {
+      setError("Incorrect password");
+      console.log(correctPassword1);
+      console.log(correctPassword2);
+    }
+  };
+
+  useEffect(() => {
+    // In a real app, this would fetch from an API
+    // Simulating API fetch with a delay
+    const timer = setTimeout(() => {
+      // Featured products could be the ones marked as featured or best sellers
+      const featured = mockProducts.sort((a, b) => a.id - b.id)
+      setProducts(featured.slice(0, 8)); // Limit to 8 products
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-shop-900 to-shop-800 text-white">
       {/* Decorative elements */}
@@ -14,28 +54,54 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-              Discover Our Latest Collection
+              Lorem ipsum dolor sit amet.
             </h1>
             <p className="text-xl opacity-90 mb-8 max-w-md">
-              Explore our curated selection of high-quality products that blend style, functionality, and value.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique dui nec est porta, eget tempor nibh ullamcorper. Maecenas sed.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild className="bg-white text-shop-900 hover:bg-gray-100">
                 <Link to="">Shop Now</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white/10">
-                <Link className="text-xl" to="/transaction">noitcasnarT</Link>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+                onClick={() => setModalOpen(true)}
+              >
+                <span className="text-xl">noitcasnarT</span>
               </Button>
+
+              <Dialog open={modalOpen} onOpenChange={setModalOpen}>
+                <DialogContent className="flex flex-col gap-4">
+                  <InputEnable
+                    type="text"
+                    placeholder="5DM"
+                    value={inputPassword1}
+                    onChange={(e) => setInputPassword1(e.target.value)}
+                    className="text-center"
+                  />
+                  <InputEnable
+                    type="text"
+                    placeholder="1AHS"
+                    value={inputPassword2}
+                    onChange={(e) => setInputPassword2(e.target.value)}
+                    className="text-center"
+                  />
+                  {error && <p className="text-red-500 text-sm">{error}</p>}
+                  <Button className="bg-red-500" onClick={handleConfirm}>Lock</Button>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
-          
+
           <div className="md:w-1/2 flex justify-center">
             <div className="relative">
               <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-shop-400 to-shop-600 opacity-75 blur"></div>
               <div className="relative bg-white p-2 rounded-lg">
-                <img 
-                  src="https://a1.vaping360.com/Vape_Memes_e0d201bf04.jpg?auto=compress,format&w=auto&h=auto&fit=clamp&sat=0&crop=edges&q=1" 
-                  alt="Featured product" 
+                <img
+                  src="https://a1.vaping360.com/Vape_Memes_e0d201bf04.jpg?auto=compress,format&w=auto&h=auto&fit=clamp&sat=0&crop=edges&q=1"
+                  alt="Featured product"
                   className="rounded w-full max-w-md object-cover"
                 />
               </div>
