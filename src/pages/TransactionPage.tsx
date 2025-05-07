@@ -8,7 +8,7 @@ const TransactionPage = () => {
   return (
     <div className="transaction-page">
       <img
-        src="https://llkhhzpiemful4l6.public.blob.vercel-storage.com/CTF-5iwfSbARaDekgjtKeseoQkHgK2wEqZ.jpg"
+        src="https://llkhhzpiemful4l6.public.blob.vercel-storage.com/CTF-dyhMUfE1LJXuYzW2T9duJpPp8A8Ku6.jpg"
         alt="Transaction"
         className="transaction-image cursor-zoom-in rounded-lg shadow-md transition-transform duration-300 w-full h-auto"
         onClick={() => setIsOpen(true)}
@@ -20,7 +20,7 @@ const TransactionPage = () => {
           onClick={() => setIsOpen(false)}
         >
           <img
-            src="https://llkhhzpiemful4l6.public.blob.vercel-storage.com/CTF-5iwfSbARaDekgjtKeseoQkHgK2wEqZ.jpg"
+            src="https://llkhhzpiemful4l6.public.blob.vercel-storage.com/CTF-dyhMUfE1LJXuYzW2T9duJpPp8A8Ku6.jpg"
             alt="Zoomed Transaction"
             className="max-w-full max-h-full p-4 rounded-lg shadow-lg"
             onClick={(e) => e.stopPropagation()} // prevent closing when clicking image
