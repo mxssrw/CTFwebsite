@@ -1,6 +1,10 @@
 
 import { Product } from "@/types";
 
+const generateRandomCode = () => {
+  return Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2, 10);
+};
+
 export const mockProducts: Product[] = [
   {
     id: 1,
@@ -14,7 +18,7 @@ export const mockProducts: Product[] = [
     bestSeller: true,
     discountPercentage: 10,
     rating: 4.8,
-    secret: "31",
+    secret: "5dm " + generateRandomCode(),
   },
   {
     id: 2,
@@ -27,7 +31,8 @@ export const mockProducts: Product[] = [
     featured: true,
     bestSeller: false,
     discountPercentage: 10,
-    rating: 4.6
+    rating: 4.6,
+    secret: generateRandomCode(),
   },
   {
     id: 3,
@@ -41,7 +46,7 @@ export const mockProducts: Product[] = [
     bestSeller: false,
     discountPercentage: 15,
     rating: 4.5,
-    secret: "13",
+    secret: "1ahs " + generateRandomCode(),
   },
   {
     id: 4,
@@ -54,7 +59,8 @@ export const mockProducts: Product[] = [
     featured: false,
     bestSeller: true,
     discountPercentage: 5,
-    rating: 4.9
+    rating: 4.9,
+    secret: generateRandomCode(),
   },
   {
     id: 5,
@@ -67,7 +73,8 @@ export const mockProducts: Product[] = [
     featured: true,
     bestSeller: true,
     discountPercentage: 10,
-    rating: 4.7
+    rating: 4.7,
+    secret: generateRandomCode(),
   },
   {
     id: 6,
@@ -80,7 +87,8 @@ export const mockProducts: Product[] = [
     featured: false,
     bestSeller: false,
     discountPercentage: 20,
-    rating: 4.4
+    rating: 4.4,
+    secret: generateRandomCode(),
   },
   {
     id: 7,
@@ -93,7 +101,8 @@ export const mockProducts: Product[] = [
     featured: true,
     bestSeller: false,
     discountPercentage: 10,
-    rating: 4.3
+    rating: 4.3,
+    secret: generateRandomCode(),
   },
   {
     id: 8,
@@ -106,6 +115,7 @@ export const mockProducts: Product[] = [
     featured: true,
     bestSeller: true,
     discountPercentage: 10,
-    rating: 4.7
+    rating: 4.7,
+    secret: generateRandomCode(),
   },
 ];

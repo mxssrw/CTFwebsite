@@ -44,17 +44,17 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link  to="" className="text-shop-800 hover:text-shop-600 transition-colors">
-              Home
+            <Link to="" className="text-shop-800 hover:text-shop-600 transition-colors">
+              Lorem
             </Link>
             <Link to="" className="text-shop-800 hover:text-shop-600 transition-colors">
-              All Products
+              Lorem
             </Link>
             <Link to="" className="text-shop-800 hover:text-shop-600 transition-colors">
-              Categories
+              Lorem
             </Link>
             <Link to="" className="text-shop-800 hover:text-shop-600 transition-colors">
-              About
+              Lorem
             </Link>
           </nav>
 
